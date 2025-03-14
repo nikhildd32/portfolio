@@ -1,10 +1,17 @@
 {
   "name": "portfolio-project",
   "version": "1.0.0",
-  "description": "Nikhil's Portfolio",
-  "main": "index.html",
-  "dependencies": {
-    "three": "^0.160.0",
-    "gsap": "^3.12.5"
-  }
+  "description": "My portfolio project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
 }
