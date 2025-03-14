@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-project",
+  "version": "1.0.0",
+  "description": "Nikhil's Portfolio",
+  "main": "index.html",
+  "dependencies": {
+    "three": "^0.160.0",
+    "gsap": "^3.12.5"
+  }
+}

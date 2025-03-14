@@ -1,0 +1,92 @@
+:root {
+    --midnight-purple: #cba6f7;
+    --deep-black: #11111f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--deep-black);
+    overflow: hidden;
+    font-family: 'Fira Code', monospace;
+}
+
+#landing-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.start-button-container {
+    position: relative;
+}
+
+#start-button {
+    position: relative;
+    background: transparent;
+    border: 2px solid var(--midnight-purple);
+    color: var(--midnight-purple);
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.button-text {
+    position: relative;
+    z-index: 2;
+    mix-blend-mode: difference;
+}
+
+.button-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--midnight-purple);
+    transition: transform 0.5s ease;
+    transform: translateX(0);
+}
+
+#start-button:hover .button-glow {
+    transform: translateX(100%);
+}
+
+#start-button:hover {
+    box-shadow: 0 0 20px var(--midnight-purple);
+    text-shadow: 0 0 5px var(--midnight-purple);
+}
+
+#transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--deep-black);
+    z-index: 10;
+    transform-origin: center;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+}
